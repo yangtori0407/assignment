@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        .chiron-goround{
+            font-family: "Chiron GoRound TC", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 350;
+            font-style: normal;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        /* 슬라이스 기본 구성 요소 */
+        .slice{
+            width: 1280px;
+            height : 720px;
+            background-color: #fcfcfc;
+            position: relative;
+            padding: 40px 0px 0px 40px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 3px rgb(194, 194, 194);
+        }
+        .sliceBorder1{
+            width: 1200px;
+            height :50px;
+            border-top: 3px solid #2869D0;
+            border-left: 3px solid #2869D0;
+            border-right: 3px solid #2869D0;
+            border-radius: 8px;
+            
+        }
+        .sliceBorder2{
+            width: 1200px;
+            height :50px;
+            border-left: 9px solid #2869D0;
+            margin-top: -7px;
+            margin-left: -3px;
+        }
+        .sliceBorder3{
+            width: 20px;
+            height: 20px;
+            background-color: #f5f5f7;
+            position: absolute;
+            left: 1228px;
+            top: 87px;
+        }
+        .sliceBorder4{
+            position: absolute;
+            width: 20px;
+            height: 250px;
+            left: 1235px;
+            top: 102px;
+            color: #c0c0c0;
+            writing-mode: vertical-rl;
+        }
+        .sliceBottom1{
+            width: 1198px;
+            height :50px;
+            border-right: 9px solid #2869D0;
+            margin-bottom: -6px;
+            
+        }
+        .sliceBottom2{
+            width: 1200px;
+            height :50px;
+            border-bottom: 3px solid #2869D0;
+            border-left: 3px solid #2869D0;
+            border-right: 3px solid #2869D0;
+            border-radius: 8px;
+        }
+        .sliceBottom3{
+            width: 20px;
+            height: 20px;
+            background-color: #f5f5f7;;
+            position: absolute;
+        }
+        .sliceBottom4{
+            position: absolute;
+            width: 20px;
+            height: 250px;
+            color: #c0c0c0;
+            writing-mode: vertical-rl;
+            top:410px;
+            left: 33px;
+        }
+        .introducePage{
+            width: 1200px;
+            height :550px;
+            position: relative;
+            display: flex;
+        }
+
+        /* 첫번째 */
+        #introduce{
+            height: 400px;
+            position: relative;
+        }
+        #introduce>p{
+            font-weight: 600;
+            font-size: 100px;
+            margin: 0px;
+            position: absolute;
+            top: 130px;
+            left: 420px;
+            color: #2869D2;
+        }
+        #firstPageName{
+            position: relative;
+            width: 100%;
+            height: 30px;
+        }
+        #firstPageName>p{
+            position: absolute;
+            color: #2869D0;
+            left: 1080px;
+            font-size: 23px;
+        }
+        /*  두번째 */
+        #information{
+            width: 60%;
+            height :100%;
+        }
+        #name{            
+            color: #2869D0;
+            position:absolute;
+            left: 70px;
+            top: -50px;
+            font-size: 70px;
+            font-weight: bold;
+        }
+        #tmi{
+            width: 100%;
+            height: 500px;
+            margin-top: 10px;
+        }
+        #profile_img{
+            width: 40%;
+            height :100%;
+            position: relative;
+        }
+        #profile_img>img{
+            width: 400px;
+            height :450px;
+            position: absolute;
+            top: 30px;
+        }
+        #tmi{
+            position: relative;
+        }
+        #tmi>table{
+            position: absolute;
+            left: 70px;
+            top:100px;
+            border-collapse: collapse;
+            font-size: 27px;
+            width: 70%;
+        }
+        .under1{
+            border-bottom: 4px solid #2869D0;
+            width: 20%;
+            
+        }
+        .under2{
+            border-bottom: 1px solid #2869D0;
+            color: rgb(90, 90, 90);
+        }
+        /* 세번째 */
+        .title{
+            width: 100%;
+            position: absolute;
+            top: -90px;
+            left: 40px;
+            font-size: 60px;
+            color: #2869D0;
+            font-weight: bold;
+        }
+        #hobbyImg{
+            width: 1200px;
+            height: 550px;
+            display: flex;
+            box-sizing: border-box;
+        }
+        #game{
+            width: 38%;
+            height: 100%;
+        }
+        #peak{
+            width: 100%;
+            height: 55%;
+            margin-top: 10px;
+        }
+        #repo{
+            width: 100%;
+            height: 40%;
+            margin-top: 8px;
+        }
+        #switch{
+            width: 35%;
+            height: 100%;
+            margin:0px 0px 0px 20px;
+        }
+        #zelda{
+            width: 100%;
+            height: 43%;
+            background-color: #2869D0;
+        }
+        #friren{
+            width: 100%;
+            height: 50%;
+            background-color: oldlace;
+            margin-top: 30px;
+        }
+        #drama{
+            width: 28%;
+            height: 100%;
+        }
+        #translate{
+            width: 90%;
+            height: 80%;
+            background-color: maroon;
+            margin: 38px 0px 0px 30px;
+        }
+        #hobbyImg img{
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+        }
+        /* 네번째 */
+        #catImg{
+            display: flex;
+            width: 1200px;
+            height: 550px;
+        }
+        
+        #tori1{
+            width: 93%;
+            height: 55%;
+            margin: 10px 0px 0px 20px;
+        }
+        #tori2{
+            width: 100%;
+            height: 40%;
+            margin: 10px 0px 0px 20px;
+            background-color: rgb(0, 0, 0);
+        }
+        #tori3{
+            width: 84%;
+            height: 80%;
+            margin: 40px 0px 0px 50px;
+        }
+        #tori4{
+            width: 90%;
+            height: 80%;
+            margin: 40px 0px 0px 30px;
+        }
+        div[id^="tori"]>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* 다섯번째 */
+        #img1{
+            position: absolute;
+            width: 220px;
+            height: 350px;
+            background-color: red;
+            margin-top: 50px;
+        }
+        #img2{
+            position: absolute;
+            width: 460px;
+            height: 250px;
+            background-color: green;
+            z-index: 1;
+            margin-top:50px;
+            left: 250px;
+        }
+        #img3{
+            position: absolute;
+            width: 400px;
+            height: 290px;
+            background-color: darkorchid;
+            z-index: 1;
+            margin-top: 30px;
+            left: 750px;
+        }
+        #img4{
+            position: absolute;
+            width: 330px;
+            height: 200px;
+            top: 340px;
+            left: 100px;
+            background-color: blue;
+        }
+        #img5{
+            position: absolute;
+            width: 460px;
+            height: 300px;
+            background-color: darkblue;
+            top: 240px;
+            left: 450px;
+        }   
+        #img6{
+            position: absolute;
+            width: 300px;
+            height: 220px;
+            background-color: mediumturquoise;
+            left: 920px;
+            top: 305px;
+            z-index: 2;
+        }
+        div[id^="img"]>img{
+            width: 100%;
+            height: 100%;
+            object-fit: fit;
+        }
+        /* 여섯번째 */
+        #introducePage6{
+            width: 1200px;
+            height :550px;
+            position: relative;
+            display: flex;
+        }
+        #keroro{
+            position: absolute;
+            width: 680px;
+            height: 350px;
+            background-color: lightgrey;
+            top: 150px;
+            left: 40px;
+        }
+        #siro{
+            position: absolute;
+            width: 400px;
+            height: 420px;
+            top: 80px;
+            left: 750px;
+            background-color: darkturquoise;
+        }
+        #introducePage6 img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder4">HOW TO SURVIVE THE FIELD</div>
+            <div class="sliceBorder2"></div>
+            
+            <div id="introduce">
+                <p>자기소개</p>
+            </div>
+            <div id="firstPageName">
+                <p>양은영</p>
+            </div>
+            <div class="sliceBottom1"></div>
+            <div class="sliceBottom3"></div>
+            <div class="sliceBottom4">FOR ON-THE-JOB WORKERS</div>
+            <div class="sliceBottom2"></div>
+        </div>
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder2"></div>
+            <div class="introducePage">
+                <div id="information">
+                    <div id="name">양은영</div>
+                    <div id="tmi">
+                        <table class="chiron-goround">
+                            <tr style="line-height: 50px;">
+                                <td class="under1 ">나이</td>
+                                <td class="under2"><span style="margin-left: 10px;">2002년생 25살</span></td>
+                            </tr>
+                            <tr style="line-height: 50px;">
+                                <td class="under1">MBTI</td>
+                                <td class="under2"><span style="margin-left: 10px;">INFP</span></td>
+                            </tr>
+                            <tr>
+                                <td class="under1" style="font-size: 25px;">좋아하는 <br>음식</td>
+                                <td class="under2"><span style="margin-left: 10px;">햄버거, 닭갈비</span></td>
+                            </tr>
+                            <tr style="line-height: 50px;">
+                                <td class="under1">전공</td>
+                                <td class="under2"><span style="margin-left: 10px;">컴퓨터공학과(올해 졸업)</span></td>
+                            </tr>
+                            <tr>
+                                <td class="under1">취미</td>
+                                <td class="under2"><ul>
+                                    <li style="margin-bottom: 10px;">닌텐도 / 스팀 게임</li>
+                                    <li>만화 / 드라마 보기</li>
+                                </ul></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="profile_img">
+                <img src="img/pororo.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder2"></div>
+            <div class="introducePage">
+                <div class="title">
+                    취미
+                </div>
+                <div id="hobbyImg">
+                    <div id="game">
+                        <div id="peak">
+                            <img src="img/peak.jpg" alt="peak 플레이 사진">
+                        </div>
+                        <div id="repo">
+                            <img src="data:image/jpeg;base64,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" alt="">
+                        </div>
+                    </div>
+                    <div id="switch">
+                        <div id="zelda">
+                            <img src="https://wimg.sedaily.com/news/legacy/2019/02/14/1VFB6DUPHW_1.jpg" alt="">
+                        </div>
+                        <div id="friren">
+                            <img src="img/friren.jpg" alt="">
+                        </div>
+                    </div>
+                    <div id="drama">
+                        <div id="translate">
+                            <img src="https://i.namu.wiki/i/5eKbUqdvkZF0jqno7YH3VUUT_pF-dQB0lq59yKndeL8rYa2XseSSgfVWeSzan-DhK9tVvLeoa_888uioONmj0w.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder2"></div>
+            <div class="introducePage">
+                <div class="title">
+                    고양이
+                </div>
+                <div id="catImg">
+                    <div style="width: 37%;">
+                        <div id="tori1">
+                            <img src="img/tori1.jpg" alt="토리 1번 사진">
+                        </div>
+                        <div id="tori2">
+                            <img src="img/tori2.jpg" alt="토리 2번 사진">
+                        </div>
+                    </div>
+                    <div style="width: 33%;">
+                        <div id="tori3">
+                            <img src="img/tori3.PNG" alt="토리 3번 사진">
+                        </div>
+                    </div>
+                    <div style="width: 32%;">
+                        <div id="tori4">
+                            <img src="img/tori4.jpg" alt="토리 4번 사진">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder2"></div>
+            <div class="introducePage">
+                <div class="title" style="top: -60px">
+                    여기 오기 전에....
+                </div>
+                <div id="img1"><img src="img/img1.jpg" alt="인스타 스토리 캡처"></div>
+                <div id="img2"><img src="img/img2.jpg" alt="멋사 해커톤 사진"></div>
+                <div id="img3"><img src="img/img3.jpg" alt="파이톤 해커톤 사진"></div>
+                <div id="img4"><img src="img/img4.png" alt="ERD 사진"></div>
+                <div id="img5"><img src="img/img5.JPG" alt="파이톤 단체 사진"></div>
+                <div id="img6"><img src="img/img6.png" alt="프로젝트 사진"></div>
+            </div>
+        </div>
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder2"></div>
+            <div id="introducePage6">
+                <div class="title" style="top: -55px; left: 60px;">
+                    앞으로....
+                </div>
+                <div id="keroro"><img src="img/keroro.jpg" alt=""></div>
+                <div id="siro"><img src="img/siro.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="slice">
+            <div class="sliceBorder1"></div>
+            <div class="sliceBorder3"></div>
+            <div class="sliceBorder2"></div>
+            
+            <div id="introduce">
+                <p style="left: 392px;">감사합니다!</p>
+            </div>
+            <div id="firstPageName">
+                <p></p>
+            </div>
+            <div class="sliceBottom1"></div>
+            <div class="sliceBottom3"></div>
+            <div class="sliceBottom4">FOR ON-THE-JOB WORKERS</div>
+            <div class="sliceBottom2"></div>
+        </div>
+    </div>
+</body>
+</html>
