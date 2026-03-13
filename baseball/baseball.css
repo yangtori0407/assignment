@@ -1,0 +1,86 @@
+.container{
+    width: 1300px;
+    height: 800px;
+    /* background-color: bisque; */
+}
+.title{
+    width: 100%;
+    height: 5%;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.baseballTable{
+    width: 100%;
+    height: 95%;
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid black;
+}
+th{
+    height: 9%;
+    font-weight: normal;
+    background: #f4f4f8;
+    color: #8b8b8b;
+    text-align: left;
+    font-size: 17px;
+}
+thead{
+    height: 10%;
+}
+tbody{
+    height: 90%;
+}
+
+
+th, td {
+    padding: 6px 15px;
+}
+
+
+/* tr:first-child th:first-child {
+    border-bottom: 30px solid #1f8fff;
+} */
+/* td:first-child {
+    border-left: 1px solid #c6c9cc;
+} */
+tr:nth-child(even) td {
+    background: #f4f4f8;
+}
+.grade{
+    width: 6%;
+    
+}
+.name{
+    width: 58%;
+}
+.name>div{
+    margin: 0px;
+    display: flex;
+    justify-content: left;
+}
+
+.name img{
+    width: 32px;
+    height: 32px;
+    
+}
+.name span{
+    width: 32px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+}
+.round, .win, .compare, .lose, .winRate, .dis, .seqLose{
+    color: black;
+    text-align: center;
+}
